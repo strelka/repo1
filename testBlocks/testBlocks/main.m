@@ -8,10 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
+//void f(int a, int (^inc)(void)){
+//    NSLog(@"%@", @(a+inc()));
+//
+//}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                      ^{dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Hello world!");
+        });
+                      });
     }
+//        __block int a = 0;
+//        int (^inc)(void) = ^int(void)
+//        {
+//            NSLog(@"%@", @(a));
+//            return a;
+//        
+//        };
+//        a += 10;
+//        
+//        f(2, inc);
+//        inc();
+
     return 0;
 }
