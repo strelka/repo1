@@ -28,7 +28,7 @@
     double root_height = contentRect.size.height;
     double root_width = contentRect.size.width;
     
-    primaryLabel.frame = CGRectMake(0, 0, root_width/4, root_height);
+    primaryLabel.frame = CGRectMake(0, 0, root_width/5, root_height);
     secondaryLabel.frame=CGRectMake(root_width/4, 0, root_width-root_width/4, root_height);
 }
 
