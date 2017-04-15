@@ -18,7 +18,9 @@
 -(void)TestMemory;
 @end
 
-@interface BlockTestClass()
+@interface BlockTestClass(){
+    NSString *_str2;
+}
 @property(nonatomic, copy) NSString* str;
 @property (nonatomic, copy) void(^test)(void);
 @end
@@ -27,6 +29,7 @@
     self = [super init];
     if (self){
         _str = @"HelloWorld";
+        _str2 = @"HelloWorld";
     
     }
     return self;
@@ -34,11 +37,15 @@
 }
 
 -(void)testMemory{
-    __weak typeof (self) weakSelf = self;
+    //__weak typeof (self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     self.test = ^void(void){
-        __strong typeof(self) strongSelf = weakSelf;
+        //__strong typeof(self) strongSelf = weakSelf;
         
-        NSLog(@"%@", strongSelf.str);
+       // NSLog(@"%@", strongSelf.str);
+        __strong typeof(self) strongSelf = weakSelf;
+        NSLog(@"%@", strongSelf->_str2);
+
     };
     self.test();
 }
