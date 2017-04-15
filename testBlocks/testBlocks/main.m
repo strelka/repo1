@@ -16,23 +16,27 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                      ^{dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_sync(dispatch_get_global_queue
+                      (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSLog(@"Hello world!");
         });
-                      });
-    }
-//        __block int a = 0;
-//        int (^inc)(void) = ^int(void)
-//        {
-//            NSLog(@"%@", @(a));
-//            return a;
-//        
-//        };
+                         }
+        __block int a = 0;
+    
+        int (^inc)(void) = ^int(void)
+        {
+            
+            ++a;
+            NSLog(@"%@", @(a));
+            return a;
+        
+        };
+    
+    [inc copy]; // iz bloka mogno rabotat' iz vne(!??)
 //        a += 10;
 //        
 //        f(2, inc);
-//        inc();
+        inc();
 
     return 0;
 }
