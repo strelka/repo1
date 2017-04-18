@@ -11,10 +11,11 @@
 #import "ViewControllerNext.h"
 #import "CustomPageVC.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIPageViewControllerDataSource>
+@property (nonatomic, strong) NSArray<UIViewController*> *vcList;
 @end
 
-@implementation AppDelegate() <UIPageViewControllerDataSource>
+@implementation AppDelegate
 
 
 
@@ -31,20 +32,39 @@
                                                                                                                                                                                                           @(UIPageViewControllerSpineLocationMid)}];
     
     pvc.dataSource = self;
+    pvc.view.backgroundColor = [UIColor blueColor];
+    
     CGRect vcFrame = self.window.frame;
     UIViewController *vc1 = [ViewController new];
     vc1.view.frame = self.window.frame;
+    vc1.view.backgroundColor = [UIColor redColor];
     
     UIViewController *vc2 = [ViewControllerNext new];
     vc2.view.frame = self.window.frame;
+    vc2.view.backgroundColor = [UIColor greenColor];
     
+
+    self.vcList = @[vc1, vc2];
     
-    [pvc setViewControllers:@[vc1, vc2]
+    [pvc setViewControllers:self.vcList
                   direction:UIPageViewControllerNavigationDirectionForward
                    animated:YES completion:^(BOOL finished){ NSLog(@"finished");}];
     self.window.rootViewController = pvc;
     
     return YES;
+}
+
+- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController{
+    NSUInteger currentIndex = [self.vcList indexOfObject:viewController];
+    NSUInteger previosIndex = abs((currentIndex - 1) % self.vcList.count);
+    return self.vcList[previosIndex];
+
+}
+- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController{
+    NSUInteger currentIndex = [self.vcList indexOfObject:viewController];
+    NSUInteger nextIndex = abs((currentIndex + 1) % self.vcList.count);
+    
+    return self.vcList[nextIndex];
 }
 
 
