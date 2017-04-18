@@ -7,16 +7,43 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "ViewControllerNext.h"
+#import "CustomPageVC.h"
 
 @interface AppDelegate ()
-
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate() <UIPageViewControllerDataSource>
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    UITabBarController *tbar = [[UITabBarController alloc] init];
+//    tbar.view.backgroundColor = [UIColor cyanColor];
+//    
+//    
+//    tbar.viewControllers = @[[ViewController new],
+//                             [ViewControllerNext new]
+//                             ];
+    CustomPageVC *pvc = [[CustomPageVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:@{UIPageViewControllerOptionSpineLocationKey:
+                                                                                                                                                                                                          @(UIPageViewControllerSpineLocationMid)}];
+    
+    pvc.dataSource = self;
+    CGRect vcFrame = self.window.frame;
+    UIViewController *vc1 = [ViewController new];
+    vc1.view.frame = self.window.frame;
+    
+    UIViewController *vc2 = [ViewControllerNext new];
+    vc2.view.frame = self.window.frame;
+    
+    
+    [pvc setViewControllers:@[vc1, vc2]
+                  direction:UIPageViewControllerNavigationDirectionForward
+                   animated:YES completion:^(BOOL finished){ NSLog(@"finished");}];
+    self.window.rootViewController = pvc;
+    
     return YES;
 }
 

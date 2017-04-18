@@ -13,6 +13,8 @@
 		04F9D74E1EA66DC900F1447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D74C1EA66DC900F1447F /* Main.storyboard */; };
 		04F9D7501EA66DC900F1447F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D74F1EA66DC900F1447F /* Assets.xcassets */; };
 		04F9D7531EA66DC900F1447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D7511EA66DC900F1447F /* LaunchScreen.storyboard */; };
+		04F9D75C1EA67AF600F1447F /* ViewControllerNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D75B1EA67AF600F1447F /* ViewControllerNext.m */; };
+		04F9D75F1EA6826300F1447F /* CustomPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D75E1EA6826300F1447F /* CustomPageVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		04F9D74F1EA66DC900F1447F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F9D7521EA66DC900F1447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F9D7541EA66DC900F1447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F9D75A1EA67AF600F1447F /* ViewControllerNext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerNext.h; sourceTree = "<group>"; };
+		04F9D75B1EA67AF600F1447F /* ViewControllerNext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNext.m; sourceTree = "<group>"; };
+		04F9D75D1EA6826300F1447F /* CustomPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPageVC.h; path = ../CustomPageVC.h; sourceTree = "<group>"; };
+		04F9D75E1EA6826300F1447F /* CustomPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPageVC.m; path = ../CustomPageVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,15 @@
 		04F9D7421EA66DC900F1447F /* 1804 */ = {
 			isa = PBXGroup;
 			children = (
+				04F9D75D1EA6826300F1447F /* CustomPageVC.h */,
+				04F9D75E1EA6826300F1447F /* CustomPageVC.m */,
 				04F9D7461EA66DC900F1447F /* AppDelegate.h */,
 				04F9D7471EA66DC900F1447F /* AppDelegate.m */,
 				04F9D7491EA66DC900F1447F /* ViewController.h */,
 				04F9D74A1EA66DC900F1447F /* ViewController.m */,
 				04F9D74C1EA66DC900F1447F /* Main.storyboard */,
+				04F9D75A1EA67AF600F1447F /* ViewControllerNext.h */,
+				04F9D75B1EA67AF600F1447F /* ViewControllerNext.m */,
 				04F9D74F1EA66DC900F1447F /* Assets.xcassets */,
 				04F9D7511EA66DC900F1447F /* LaunchScreen.storyboard */,
 				04F9D7541EA66DC900F1447F /* Info.plist */,
@@ -152,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F9D74B1EA66DC900F1447F /* ViewController.m in Sources */,
+				04F9D75C1EA67AF600F1447F /* ViewControllerNext.m in Sources */,
+				04F9D75F1EA6826300F1447F /* CustomPageVC.m in Sources */,
 				04F9D7481EA66DC900F1447F /* AppDelegate.m in Sources */,
 				04F9D7451EA66DC900F1447F /* main.m in Sources */,
 			);

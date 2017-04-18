@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (assign, nonatomic) NSInteger index;
+@property (strong, nonatomic) IBOutlet UILabel *screenNumber;
 
 
 @end
