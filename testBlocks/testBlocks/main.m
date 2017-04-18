@@ -54,7 +54,17 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        NSArray *arr = @[@(1), @(2), @(3), @(4), @(5)];
         
+        [arr enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx,
+                                          BOOL * _Nonnull stop){
+            if (3 == [obj intValue]){
+            
+                NSLog(@"%@", @(idx));
+            }
+        }
+         
+         ];
         
 //        dispatch_sync(dispatch_get_global_queue
 //                      (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -77,9 +87,9 @@ int main(int argc, const char * argv[]) {
 ////        
 ////        f(2, inc);
 //        inc();
-        BlockTestClass *test = [BlockTestClass new];
-        [test testMemory];
-        
+//        BlockTestClass *test = [BlockTestClass new];
+//        [test testMemory];
+//        
     }
     return 0;
 }
