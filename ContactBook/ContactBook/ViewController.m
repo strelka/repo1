@@ -30,8 +30,6 @@
     
     [self.view addSubview:self.tableView];
     
-    
-    
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
@@ -69,8 +67,7 @@
     
     [cell.avatarLabel setColor:cr];
     [cell.avatarLabel setTitle:cr];
-    cell.avatarLabel.layer.cornerRadius = 150.0f;
-    cell.avatarLabel.layer.borderWidth = 2.0f;
+    
     
     
     //randomColor* rcolor = colors[indexPath.row];

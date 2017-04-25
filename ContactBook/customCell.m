@@ -40,6 +40,9 @@
     
     }];
     
+    avatarLabel.layer.cornerRadius = 150.0f;
+    avatarLabel.layer.borderWidth = 2.0f;
+    
      [primaryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(avatarLabel.mas_right);
         make.right.equalTo(self.mas_right);
@@ -53,10 +56,7 @@
         make.right.equalTo(self.mas_right);
         make.top.equalTo(self.mas_centerY);
         make.bottom.equalTo(self.mas_bottom);
-        
-        
     }];
-
 }
 
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated {
