@@ -40,8 +40,9 @@
     
     }];
     
-    avatarLabel.layer.cornerRadius = 150.0f;
+    avatarLabel.layer.cornerRadius = 10;
     avatarLabel.layer.borderWidth = 2.0f;
+    avatarLabel.clipsToBounds = YES;
     
      [primaryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(avatarLabel.mas_right);
