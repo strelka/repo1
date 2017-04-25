@@ -15,6 +15,9 @@
 		048B824F1EA91C6E00F1C622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048B824D1EA91C6E00F1C622 /* LaunchScreen.storyboard */; };
 		048B825A1EA91C6E00F1C622 /* ReverserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B82591EA91C6E00F1C622 /* ReverserTests.m */; };
 		048B82651EA91C6E00F1C622 /* ReverserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B82641EA91C6E00F1C622 /* ReverserUITests.m */; };
+		048B82741EA91D0200F1C622 /* SBDReverser.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B82731EA91D0200F1C622 /* SBDReverser.m */; };
+		048B82771EA91D3B00F1C622 /* UpperCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B82761EA91D3B00F1C622 /* UpperCase.m */; };
+		9D43812BD3E044F08911130D /* libPods-Reverser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38934CF794C52AA9EBF0EF3F /* libPods-Reverser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		048B82601EA91C6E00F1C622 /* ReverserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048B82641EA91C6E00F1C622 /* ReverserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverserUITests.m; sourceTree = "<group>"; };
 		048B82661EA91C6E00F1C622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048B82721EA91D0200F1C622 /* SBDReverser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDReverser.h; sourceTree = "<group>"; };
+		048B82731EA91D0200F1C622 /* SBDReverser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDReverser.m; sourceTree = "<group>"; };
+		048B82751EA91D3B00F1C622 /* UpperCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpperCase.h; sourceTree = "<group>"; };
+		048B82761EA91D3B00F1C622 /* UpperCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpperCase.m; sourceTree = "<group>"; };
+		38934CF794C52AA9EBF0EF3F /* libPods-Reverser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reverser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		605D34927FDB5D05F1E33F29 /* Pods-Reverser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reverser.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reverser/Pods-Reverser.release.xcconfig"; sourceTree = "<group>"; };
+		DD340813469A7C9FD3ADB74C /* Pods-Reverser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reverser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reverser/Pods-Reverser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D43812BD3E044F08911130D /* libPods-Reverser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,8 @@
 				048B82581EA91C6E00F1C622 /* ReverserTests */,
 				048B82631EA91C6E00F1C622 /* ReverserUITests */,
 				048B823D1EA91C6E00F1C622 /* Products */,
+				7B338E4D135894D8506E3361 /* Pods */,
+				126FACBB8F37DE721EE3FFA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +118,15 @@
 				048B82431EA91C6E00F1C622 /* AppDelegate.m */,
 				048B82451EA91C6E00F1C622 /* ViewController.h */,
 				048B82461EA91C6E00F1C622 /* ViewController.m */,
+				048B82721EA91D0200F1C622 /* SBDReverser.h */,
+				048B82731EA91D0200F1C622 /* SBDReverser.m */,
 				048B82481EA91C6E00F1C622 /* Main.storyboard */,
 				048B824B1EA91C6E00F1C622 /* Assets.xcassets */,
 				048B824D1EA91C6E00F1C622 /* LaunchScreen.storyboard */,
 				048B82501EA91C6E00F1C622 /* Info.plist */,
 				048B823F1EA91C6E00F1C622 /* Supporting Files */,
+				048B82751EA91D3B00F1C622 /* UpperCase.h */,
+				048B82761EA91D3B00F1C622 /* UpperCase.m */,
 			);
 			path = Reverser;
 			sourceTree = "<group>";
@@ -140,6 +157,23 @@
 			path = ReverserUITests;
 			sourceTree = "<group>";
 		};
+		126FACBB8F37DE721EE3FFA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38934CF794C52AA9EBF0EF3F /* libPods-Reverser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B338E4D135894D8506E3361 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD340813469A7C9FD3ADB74C /* Pods-Reverser.debug.xcconfig */,
+				605D34927FDB5D05F1E33F29 /* Pods-Reverser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048B82691EA91C6E00F1C622 /* Build configuration list for PBXNativeTarget "Reverser" */;
 			buildPhases = (
+				AFB61CCE2E77769C5E958CD4 /* [CP] Check Pods Manifest.lock */,
 				048B82381EA91C6E00F1C622 /* Sources */,
 				048B82391EA91C6E00F1C622 /* Frameworks */,
 				048B823A1EA91C6E00F1C622 /* Resources */,
+				F0AB279FAD8D24C091F68574 /* [CP] Embed Pods Frameworks */,
+				C7C46C58263C496409372523 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,14 +308,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AFB61CCE2E77769C5E958CD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C46C58263C496409372523 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reverser/Pods-Reverser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0AB279FAD8D24C091F68574 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reverser/Pods-Reverser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		048B82381EA91C6E00F1C622 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048B82771EA91D3B00F1C622 /* UpperCase.m in Sources */,
 				048B82471EA91C6E00F1C622 /* ViewController.m in Sources */,
 				048B82441EA91C6E00F1C622 /* AppDelegate.m in Sources */,
 				048B82411EA91C6E00F1C622 /* main.m in Sources */,
+				048B82741EA91D0200F1C622 /* SBDReverser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +512,7 @@
 		};
 		048B826A1EA91C6E00F1C622 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD340813469A7C9FD3ADB74C /* Pods-Reverser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 52MJRS22LM;
@@ -437,6 +525,7 @@
 		};
 		048B826B1EA91C6E00F1C622 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 605D34927FDB5D05F1E33F29 /* Pods-Reverser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 52MJRS22LM;
